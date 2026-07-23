@@ -1,0 +1,52 @@
+{
+  "benchmark": "numeric-robustness-qa",
+  "clips_per_provider": 90,
+  "repeats_per_clip": 5,
+  "high_error_threshold": 0.5,
+  "providers": [
+    {
+      "provider": "faster-whisper",
+      "model": "base.en",
+      "status": "completed",
+      "observations": 450,
+      "incorrect_observations": 35,
+      "gate1_failure_rate": 0.0777777778,
+      "clips_with_any_error_rate": 0.0777777778,
+      "high_error_rate": 0.0777777778,
+      "high_error_clips": 7,
+      "results": "output/stt-numeric/numeric/results.jsonl"
+    },
+    {
+      "provider": "deepgram",
+      "model": "nova-3",
+      "status": "completed",
+      "observations": 450,
+      "incorrect_observations": 0,
+      "gate1_failure_rate": 0.0,
+      "clips_with_any_error_rate": 0.0,
+      "high_error_rate": 0.0,
+      "high_error_clips": 0,
+      "results": "output/stt-numeric/deepgram/numeric/results.jsonl"
+    },
+    {
+      "provider": "cartesia",
+      "model": "ink-whisper",
+      "status": "blocked_missing_CARTESIA_API_KEY"
+    },
+    {
+      "provider": "assemblyai",
+      "model": "universal-3-pro,universal-2",
+      "status": "blocked_missing_ASSEMBLYAI_API_KEY"
+    },
+    {
+      "provider": "elevenlabs",
+      "model": "scribe_v2",
+      "status": "blocked_missing_ELEVENLABS_API_KEY"
+    },
+    {
+      "provider": "groq",
+      "model": "whisper-large-v3",
+      "status": "blocked_missing_GROQ_API_KEY"
+    }
+  ]
+}

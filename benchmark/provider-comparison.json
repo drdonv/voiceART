@@ -1,0 +1,147 @@
+{
+  "benchmark": "numeric-robustness-qa",
+  "corpus": {
+    "aggregate_sha256": "1391fc5c6090e310598d92248c74990054a819ab26f7ead3534aaf5426ec9cd1",
+    "lock_path": "benchmark/numeric-corpus-lock.json",
+    "manifest_sha256": "a389d6b43f6ff0d38a02e468ae78d8366823e2f1946cc905315a5ef9aa571540"
+  },
+  "protocol": {
+    "clips": 90,
+    "high_error_threshold": 0.5,
+    "repeats_per_clip": 4
+  },
+  "providers": [
+    {
+      "affected_clip_rate": 0.0,
+      "affected_clips": 0,
+      "clips": 90,
+      "display_name": "Deepgram",
+      "failure_rate": 0.0,
+      "failures": [],
+      "high_error_clips": 0,
+      "incorrect_observations": 0,
+      "model": "nova-3",
+      "observations": 360,
+      "provider": "deepgram",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/deepgram-nova3-4x/results.jsonl",
+      "results_sha256": "ca6d695267314526a5e7863a4426be8eb17b768fb77e1cca6af36b03766ca629",
+      "run_date": "2026-07-23",
+      "settings": {
+        "language": "en",
+        "numerals": true,
+        "punctuate": true,
+        "smart_format": true
+      }
+    },
+    {
+      "affected_clip_rate": 0.0,
+      "affected_clips": 0,
+      "clips": 90,
+      "display_name": "Cartesia",
+      "failure_rate": 0.0,
+      "failures": [],
+      "high_error_clips": 0,
+      "incorrect_observations": 0,
+      "model": "ink-whisper",
+      "observations": 360,
+      "provider": "cartesia",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/cartesia-ink-4x/results.jsonl",
+      "results_sha256": "0a0f465c7d30f6d5d598fd5a5a749dcb3eb859f9a54bfc351d4649d82a5e3c35",
+      "run_date": "2026-07-23",
+      "settings": {
+        "api_version": "2026-03-01",
+        "language": "en"
+      }
+    },
+    {
+      "affected_clip_rate": 0.03333333333333333,
+      "affected_clips": 3,
+      "clips": 90,
+      "display_name": "ElevenLabs",
+      "failure_rate": 0.019444444444444445,
+      "failures": [
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 2,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 3,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 4,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 FIFA units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 FIFA units for the QA fixture",
+          "repeat": 3,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-digits",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        }
+      ],
+      "high_error_clips": 2,
+      "incorrect_observations": 7,
+      "model": "scribe_v2",
+      "observations": 360,
+      "provider": "elevenlabs",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/elevenlabs-scribe-v2-4x/results.jsonl",
+      "results_sha256": "f6992c7ce3f8199616aeff8f81e5a1269ecb9060ebb0a6baa94ad1d203626f6c",
+      "run_date": "2026-07-23",
+      "settings": {
+        "diarize": false,
+        "language_code": "eng",
+        "tag_audio_events": false
+      }
+    }
+  ],
+  "schema_version": 1,
+  "status": "canonical"
+}

@@ -1,0 +1,18 @@
+repeats=4 threshold=0.5
+clips=90
+observations=360
+gate1_failure_rate=0.013889
+clips_with_any_error_rate=0.033333
+high_error_rate=0.011111
+high_error=1
+
+0.75 elevenlabs numeric-2550-spelled am_adam/fast 2550 -> 25 (output/kokoro/numeric/numeric-2550-spelled__am_adam__fast.wav)
+0.25 elevenlabs numeric-2550-digits am_adam/fast 2550 -> 25 (output/kokoro/numeric/numeric-2550-digits__am_adam__fast.wav)
+0.25 elevenlabs numeric-2550-spelled af_bella/fast 2550 -> 25 (output/kokoro/numeric/numeric-2550-spelled__af_bella__fast.wav)
+0.00 elevenlabs numeric-1200-words af_bella/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__fast.wav)
+0.00 elevenlabs numeric-1200-words af_bella/normal 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__normal.wav)
+0.00 elevenlabs numeric-1200-words af_bella/slow 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__slow.wav)
+0.00 elevenlabs numeric-1200-words af_heart/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__fast.wav)
+0.00 elevenlabs numeric-1200-words af_heart/normal 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__normal.wav)
+0.00 elevenlabs numeric-1200-words af_heart/slow 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__slow.wav)
+0.00 elevenlabs numeric-1200-words am_adam/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__am_adam__fast.wav)
