@@ -11,6 +11,7 @@ from voiceart.numeric_benchmark import (
     ElevenLabsTranscriber,
     FasterWhisperTranscriber,
     GroqTranscriber,
+    OpenAITranscriber,
     Transcriber,
     run_numeric_benchmark,
 )
@@ -61,7 +62,15 @@ from voiceart.numeric_benchmark import (
 @click.option(
     "--backend",
     type=click.Choice(
-        ["whisper", "deepgram", "cartesia", "assemblyai", "elevenlabs", "groq"],
+        [
+            "whisper",
+            "deepgram",
+            "cartesia",
+            "assemblyai",
+            "elevenlabs",
+            "groq",
+            "openai",
+        ],
         case_sensitive=False,
     ),
     default="whisper",
@@ -93,6 +102,7 @@ def numeric_benchmark_command(
         "assemblyai": AssemblyAITranscriber(),
         "elevenlabs": ElevenLabsTranscriber(),
         "groq": GroqTranscriber(),
+        "openai": OpenAITranscriber(),
     }
     transcriber = transcribers[backend]
 

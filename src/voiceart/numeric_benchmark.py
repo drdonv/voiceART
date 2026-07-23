@@ -258,6 +258,30 @@ class ElevenLabsTranscriber:
 
 
 @dataclass(frozen=True, slots=True)
+class OpenAITranscriber:
+    """OpenAI GPT-4o batch transcription backend."""
+
+    api_key: str | None = None
+    model_name: str = "gpt-4o-transcribe"
+
+    def transcribe(self, wav_path: Path) -> str:
+        """Transcribe a WAV using OpenAI's audio transcription endpoint."""
+        key = _require_api_key(self.api_key, "OPENAI_API_KEY", "OpenAI")
+        payload = _post_multipart(
+            "https://api.openai.com/v1/audio/transcriptions",
+            headers={"Authorization": f"Bearer {key}"},
+            fields={
+                "model": self.model_name,
+                "language": "en",
+                "temperature": "0",
+                "response_format": "json",
+            },
+            wav_path=wav_path,
+        )
+        return str(payload.get("text") or "")
+
+
+@dataclass(frozen=True, slots=True)
 class GroqTranscriber:
     """Groq-hosted Whisper STT backend."""
 

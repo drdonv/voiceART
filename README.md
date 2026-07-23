@@ -61,6 +61,7 @@ Provider credentials are read from environment variables:
 export DEEPGRAM_API_KEY=...
 export CARTESIA_API_KEY=...
 export ELEVENLABS_API_KEY=...
+export OPENAI_API_KEY=...
 ```
 
 Keys are never serialized into result artifacts.
@@ -74,10 +75,11 @@ match the configured 10-phrase × 3-voice × 3-rate grid.
 voiceart numeric --backend deepgram --repeats 4
 voiceart numeric --backend cartesia --repeats 4
 voiceart numeric --backend elevenlabs --repeats 4
+voiceart numeric --backend openai --repeats 4
 ```
 
 Additional adapters are implemented for local faster-whisper, AssemblyAI, Groq,
-and Deepgram Flux.
+OpenAI GPT-4o Transcribe, and Deepgram Flux.
 
 ## Additional suites
 

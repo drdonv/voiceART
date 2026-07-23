@@ -18,6 +18,7 @@ from voiceart.numeric_benchmark import (
     ElevenLabsTranscriber,
     FasterWhisperTranscriber,
     GroqTranscriber,
+    OpenAITranscriber,
     TestUtterance,
     Transcriber,
     _read_flux_pcm,
@@ -333,6 +334,7 @@ def test_deepgram_transcriber_uses_sdk_response(
             "api.elevenlabs.io/v1/speech-to-text",
         ),
         (GroqTranscriber(), "GROQ_API_KEY", "api.groq.com/openai/v1/audio/transcriptions"),
+        (OpenAITranscriber(), "OPENAI_API_KEY", "api.openai.com/v1/audio/transcriptions"),
     ],
 )
 def test_http_provider_transcribers_use_structured_text_response(
@@ -351,6 +353,25 @@ def test_http_provider_transcribers_use_structured_text_response(
 
     assert transcriber.transcribe(wav_path) == "two thousand five hundred fifty"
     assert expected_url in post.call_args.args[0]
+
+
+def test_openai_transcriber_uses_reproducible_batch_settings(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """The OpenAI adapter should use the quality model with deterministic settings."""
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    wav_path = tmp_path / "sample.wav"
+    wav_path.write_bytes(b"wav")
+    post = MagicMock(return_value={"text": "forty two"})
+    monkeypatch.setattr("voiceart.numeric_benchmark._post_multipart", post)
+
+    assert OpenAITranscriber().transcribe(wav_path) == "forty two"
+    assert post.call_args.kwargs["fields"] == {
+        "model": "gpt-4o-transcribe",
+        "language": "en",
+        "temperature": "0",
+        "response_format": "json",
+    }
 
 
 def test_assemblyai_transcriber_uploads_submits_and_polls(
