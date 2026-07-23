@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -14,6 +16,14 @@ ROOT = Path(__file__).resolve().parents[1]
 CORPUS_LOCK = ROOT / "benchmark/numeric-corpus-lock.json"
 OUTPUT_JSON = ROOT / "benchmark/provider-comparison.json"
 OUTPUT_MARKDOWN = ROOT / "benchmark/provider-comparison.md"
+
+AMBIGUOUS_RECOVERABLE_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("25 50", re.compile(r"\b25\s+50\b")),
+    ("25-50", re.compile(r"\b25-50\b")),
+    ("25.50", re.compile(r"\b25\.50\b")),
+    ("two 550", re.compile(r"\btwo\s+550\b")),
+    ("two 550s", re.compile(r"\btwo\s+550s\b")),
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -61,6 +71,17 @@ RUNS = (
             "diarize": False,
         },
     ),
+    ProviderRun(
+        provider="openai",
+        display_name="OpenAI",
+        model="gpt-4o-transcribe",
+        results_path=ROOT / "benchmark/runs/openai-gpt-4o-transcribe-4x/results.jsonl",
+        settings={
+            "language": "en",
+            "temperature": 0,
+            "response_format": "json",
+        },
+    ),
 )
 
 
@@ -88,6 +109,45 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
             raise ValueError(f"{path}:{line_number} is not a JSON object")
         rows.append(value)
     return rows
+
+
+def _ambiguous_recoverable_label(transcript: str) -> str | None:
+    """Return a label when a transcript is numerically salvageable but ambiguous."""
+    normalized = transcript.lower()
+    for label, pattern in AMBIGUOUS_RECOVERABLE_PATTERNS:
+        if pattern.search(normalized):
+            return label
+    return None
+
+
+def _summarize_ambiguous_examples(
+    observations: list[dict[str, object]],
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """Return compact summaries and one representative example per surface form."""
+    counts = Counter(str(observation["surface_form"]) for observation in observations)
+    clip_sets: dict[str, set[tuple[str, str, str]]] = defaultdict(set)
+    examples: dict[str, dict[str, object]] = {}
+    for observation in observations:
+        label = str(observation["surface_form"])
+        clip_sets[label].add(
+            (
+                str(observation["id"]),
+                str(observation["voice"]),
+                str(observation["rate"]),
+            )
+        )
+        examples.setdefault(label, observation)
+
+    summaries = [
+        {
+            "surface_form": label,
+            "observations": counts[label],
+            "clips": len(clip_sets[label]),
+        }
+        for label in sorted(counts)
+    ]
+    representative_examples = [examples[label] for label in sorted(examples)]
+    return summaries, representative_examples
 
 
 def _verify_corpus_lock(lock: dict[str, Any]) -> set[tuple[str, str, str, str, str]]:
@@ -136,6 +196,8 @@ def _summarize_run(
     actual_rows: set[tuple[str, str, str, str, str]] = set()
     failures: list[dict[str, object]] = []
     affected_clips: set[tuple[str, str, str]] = set()
+    ambiguous_observations: list[dict[str, object]] = []
+    ambiguous_clips: set[tuple[str, str, str]] = set()
 
     for row in rows:
         if row.get("backend") != run.provider:
@@ -181,12 +243,32 @@ def _summarize_run(
                         "observed_amount": observation,
                     }
                 )
+                continue
+
+            ambiguous_label = _ambiguous_recoverable_label(transcript)
+            if ambiguous_label is not None:
+                ambiguous_clips.add(clip_key)
+                ambiguous_observations.append(
+                    {
+                        "id": row["id"],
+                        "voice": row["voice"],
+                        "rate": row["rate"],
+                        "repeat": repeat,
+                        "spoken_amount": row["spoken_amount"],
+                        "raw_transcript": transcript,
+                        "surface_form": ambiguous_label,
+                    }
+                )
 
     if len(rows) != 90 or actual_rows != expected_rows:
         raise ValueError(f"{run.results_path} does not match the locked 90-clip corpus")
 
     observations = sum(int(row["repeats"]) for row in rows)
     high_error_clips = sum(bool(row["is_high_error"]) for row in rows)
+    ambiguous_breakdown, ambiguous_examples = _summarize_ambiguous_examples(
+        ambiguous_observations
+    )
+
     return {
         "provider": run.provider,
         "display_name": run.display_name,
@@ -204,6 +286,12 @@ def _summarize_run(
         "affected_clip_rate": len(affected_clips) / len(rows),
         "high_error_clips": high_error_clips,
         "failures": failures,
+        "ambiguous_recoverable_observations": len(ambiguous_observations),
+        "ambiguous_recoverable_rate": len(ambiguous_observations) / observations,
+        "ambiguous_recoverable_clips": len(ambiguous_clips),
+        "ambiguous_recoverable_clip_rate": len(ambiguous_clips) / len(rows),
+        "ambiguous_recoverable_breakdown": ambiguous_breakdown,
+        "ambiguous_recoverable_examples": ambiguous_examples,
     }
 
 
@@ -219,9 +307,9 @@ def _render_markdown(comparison: dict[str, Any]) -> str:
         f"- Repeats per clip: {comparison['protocol']['repeats_per_clip']}",
         f"- Corpus SHA-256: `{comparison['corpus']['aggregate_sha256']}`",
         "",
-        "| Provider | Model | Incorrect observations | Failure rate | "
-        "Affected clips | High-error clips |",
-        "|---|---|---:|---:|---:|---:|",
+        "| Provider | Model | Egregious errors | Error rate | "
+        "Affected clips | Ambiguous but recoverable | Ambiguous clips | High-error clips |",
+        "|---|---|---:|---:|---:|---:|---:|---:|",
     ]
     for provider in comparison["providers"]:
         lines.append(
@@ -229,6 +317,8 @@ def _render_markdown(comparison: dict[str, Any]) -> str:
             f"{provider['incorrect_observations']}/{provider['observations']} | "
             f"{provider['failure_rate']:.2%} | "
             f"{provider['affected_clips']}/{provider['clips']} | "
+            f"{provider['ambiguous_recoverable_observations']}/{provider['observations']} | "
+            f"{provider['ambiguous_recoverable_clips']}/{provider['clips']} | "
             f"{provider['high_error_clips']} |"
         )
 
@@ -256,6 +346,47 @@ def _render_markdown(comparison: dict[str, Any]) -> str:
                 f"{failure['repeat']} | {failure['spoken_amount']} | "
                 f"{failure['observed_amount']} | {transcript} |"
             )
+    lines.extend(("", "## Ambiguous but recoverable transcripts", ""))
+    breakdown = [
+        (provider["display_name"], row)
+        for provider in comparison["providers"]
+        for row in provider["ambiguous_recoverable_breakdown"]
+    ]
+    if not breakdown:
+        lines.append("No ambiguous-but-recoverable transcripts.")
+    else:
+        lines.extend(
+            (
+                "| Provider | Surface form | Observations | Affected clips |",
+                "|---|---|---:|---:|",
+            )
+        )
+        for provider_name, row in breakdown:
+            lines.append(
+                f"| {provider_name} | `{row['surface_form']}` | "
+                f"{row['observations']} | {row['clips']} |"
+            )
+
+        lines.extend(("", "Representative examples:", ""))
+        lines.extend(
+            (
+                "| Provider | Clip | Voice/rate | Repeat | Expected | Surface form | Raw transcript |",
+                "|---|---|---|---:|---:|---|---|",
+            )
+        )
+        examples = [
+            (provider["display_name"], observation)
+            for provider in comparison["providers"]
+            for observation in provider["ambiguous_recoverable_examples"]
+        ]
+        for provider_name, observation in examples:
+            transcript = str(observation["raw_transcript"]).replace("|", "\\|")
+            lines.append(
+                f"| {provider_name} | `{observation['id']}` | "
+                f"`{observation['voice']}/{observation['rate']}` | "
+                f"{observation['repeat']} | {observation['spoken_amount']} | "
+                f"`{observation['surface_form']}` | {transcript} |"
+            )
     return "\n".join(lines) + "\n"
 
 
@@ -264,7 +395,7 @@ def main() -> None:
     lock = _read_json(CORPUS_LOCK)
     expected_rows = _verify_corpus_lock(lock)
     comparison = {
-        "schema_version": 1,
+        "schema_version": 2,
         "benchmark": "numeric-robustness-qa",
         "status": "canonical",
         "protocol": {

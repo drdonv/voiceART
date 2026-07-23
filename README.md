@@ -13,13 +13,17 @@ evaluate downstream agent behavior.
 The canonical run uses one locked corpus of 90 Kokoro WAVs and four independent
 transcriptions per clip.
 
-| Provider | Incorrect observations | Failure rate | Affected clips |
-|---|---:|---:|---:|
-| Deepgram Nova-3 | 0/360 | 0.00% | 0/90 |
-| Cartesia Ink | 0/360 | 0.00% | 0/90 |
-| ElevenLabs Scribe v2 | 7/360 | 1.94% | 3/90 |
+| Provider | Egregious errors | Affected clips | Ambiguous but recoverable | Ambiguous clips |
+|---|---:|---:|---:|---:|
+| Deepgram Nova-3 | 0/360 | 0/90 | 72/360 | 18/90 |
+| Cartesia Ink | 0/360 | 0/90 | 36/360 | 9/90 |
+| ElevenLabs Scribe v2 | 7/360 | 3/90 | 0/360 | 0/90 |
+| OpenAI GPT-4o Transcribe | 12/360 | 5/90 | 50/360 | 14/90 |
 
-All seven verified failures collapsed `2550` to `25` at fast speech rates.
+All 19 verified failures occurred at fast speech rates. ElevenLabs collapsed
+`2550` to `25`; OpenAI missed `42`, `75`, and `2550`. Deepgram and Cartesia
+had no wrong-amount errors in the canonical run, but both emitted
+surface-ambiguous `2550` variants such as `25 50` and `two 550`.
 The raw transcripts, exact repeats, result hashes, and provider settings are in
 [`benchmark/provider-comparison.md`](benchmark/provider-comparison.md).
 
@@ -101,8 +105,13 @@ supported, including:
 - `2 550`
 - `two 550`
 
-An observation fails only when the normalized amount differs from that clip's
-declared `spoken_amount`.
+The published comparison separates:
+
+- Egregious errors: the normalized amount differs from that clip's
+  `spoken_amount`.
+- Ambiguous but recoverable: the normalized amount matches, but the surface
+  transcript uses an ambiguous rendering such as `25 50`, `25-50`, `25.50`, or
+  `two 550`.
 
 ## License
 
