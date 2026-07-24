@@ -1,4 +1,4 @@
-"""Deepgram Nova-3 numeric benchmark across Flux Multilingual languages."""
+"""Deepgram Nova-3 multilingual numeric benchmark."""
 
 from __future__ import annotations
 
@@ -235,6 +235,8 @@ def synthesize_multilingual_sweep(
         if (
             cached.get("sample_count") == expected_count
             and len(cached_samples) == expected_count
+            and cached.get("languages") == [s.code for s in specs]
+            and cached.get("rates") == dict(rates)
             and all((output_dir / str(sample["file"])).is_file() for sample in cached_samples)
         ):
             return existing_manifest

@@ -8,6 +8,19 @@ provider comparison.
 This repository evaluates STT providers. It does not call voice agents or
 evaluate downstream agent behavior.
 
+## Error classification
+
+Benchmark results separate two kinds of transcription failure:
+
+- **Egregious**: the transcription is fully wrong — the normalized amount
+  differs from the spoken amount (e.g. `42` transcribed as `14`, or `2550`
+  collapsed to `25`).
+- **Ambiguous but recoverable**: the numbers were correctly transcribed but the
+  surface form leaves the meaning unclear (e.g. `"twenty-five fifty"` rendered
+  as `"25 50"` by Deepgram, or `"two 550"` by Cartesia). The scorer recovers
+  the correct amount, but a downstream agent or human reader could
+  misinterpret it.
+
 ## Canonical English results
 
 The canonical run uses one locked corpus of 90 Kokoro WAVs and four independent

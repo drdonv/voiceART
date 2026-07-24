@@ -150,7 +150,9 @@ def _summarize_ambiguous_examples(
     return summaries, representative_examples
 
 
-def _verify_corpus_lock(lock: dict[str, Any]) -> set[tuple[str, str, str, str, str]]:
+def _verify_corpus_lock(
+    lock: dict[str, Any],
+) -> tuple[set[tuple[str, str, str, str, str]], dict[str, str]]:
     """Verify the manifest, all WAV hashes, and the aggregate corpus digest."""
     manifest_record = lock["manifest"]
     manifest_path = ROOT / manifest_record["path"]
@@ -184,12 +186,13 @@ def _verify_corpus_lock(lock: dict[str, Any]) -> set[tuple[str, str, str, str, s
     aggregate = hashlib.sha256("".join(ordered_hashes).encode()).hexdigest()
     if aggregate != lock["aggregate"]["sha256"]:
         raise ValueError("numeric corpus aggregate does not match its lock")
-    return expected_rows
+    return expected_rows, file_records
 
 
 def _summarize_run(
     run: ProviderRun,
     expected_rows: set[tuple[str, str, str, str, str]],
+    file_digests: dict[str, str],
 ) -> dict[str, Any]:
     """Validate and summarize one fresh provider run."""
     rows = _read_jsonl(run.results_path)
@@ -212,11 +215,19 @@ def _summarize_run(
         if len(transcripts) != 4 or len(observations) != 4:
             raise ValueError(f"{run.results_path} contains an incomplete observation row")
 
+        wav_filename = Path(str(row["wav_path"])).name
+        expected_digest = file_digests.get(wav_filename)
+        if expected_digest is None:
+            raise ValueError(f"{run.results_path}: {wav_filename} is not in the locked corpus")
+        wav_path = Path(str(row["wav_path"]))
+        if wav_path.exists() and _sha256(wav_path) != expected_digest:
+            raise ValueError(f"{run.results_path}: {wav_filename} digest does not match the lock")
+
         clip_key = (str(row["id"]), str(row["voice"]), str(row["rate"]))
         actual_rows.add(
             (
                 *clip_key,
-                Path(str(row["wav_path"])).name,
+                wav_filename,
                 str(row["spoken_amount"]),
             )
         )
@@ -264,7 +275,15 @@ def _summarize_run(
         raise ValueError(f"{run.results_path} does not match the locked 90-clip corpus")
 
     observations = sum(int(row["repeats"]) for row in rows)
-    high_error_clips = sum(bool(row["is_high_error"]) for row in rows)
+    high_error_threshold = 0.5
+    high_error_clips = 0
+    for row in rows:
+        errors = sum(
+            1 for obs, amt in zip(row["observations"], [row["spoken_amount"]] * 4, strict=True)
+            if obs != amt
+        )
+        if errors / int(row["repeats"]) >= high_error_threshold:
+            high_error_clips += 1
     ambiguous_breakdown, ambiguous_examples = _summarize_ambiguous_examples(
         ambiguous_observations
     )
@@ -393,7 +412,7 @@ def _render_markdown(comparison: dict[str, Any]) -> str:
 def main() -> None:
     """Validate fresh evidence and write canonical comparison artifacts."""
     lock = _read_json(CORPUS_LOCK)
-    expected_rows = _verify_corpus_lock(lock)
+    expected_rows, file_digests = _verify_corpus_lock(lock)
     comparison = {
         "schema_version": 2,
         "benchmark": "numeric-robustness-qa",
@@ -408,7 +427,7 @@ def main() -> None:
             "manifest_sha256": lock["manifest"]["sha256"],
             "aggregate_sha256": lock["aggregate"]["sha256"],
         },
-        "providers": [_summarize_run(run, expected_rows) for run in RUNS],
+        "providers": [_summarize_run(run, expected_rows, file_digests) for run in RUNS],
     }
     OUTPUT_JSON.write_text(
         json.dumps(comparison, indent=2, sort_keys=True) + "\n",

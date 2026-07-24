@@ -19,7 +19,12 @@ from typing import TYPE_CHECKING, Protocol, cast, runtime_checkable
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from voiceart.kokoro_sweep import DEFAULT_RATES, DEFAULT_VOICES, synthesize_kokoro_sweep
+from voiceart.kokoro_sweep import (
+    DEFAULT_RATES,
+    DEFAULT_VOICES,
+    KOKORO_SAMPLE_RATE,
+    synthesize_kokoro_sweep,
+)
 
 if TYPE_CHECKING:
     from collections.abc import Callable, Iterable, Mapping, Sequence
@@ -572,7 +577,7 @@ def benchmark_numeric_utterances(
     manifest = {
         "attack": "numeric-robustness-qa",
         "sample_count": len(samples),
-        "sample_rate_hz": 24_000,
+        "sample_rate_hz": KOKORO_SAMPLE_RATE,
         "utterances": [asdict(utterance) for utterance in utterances],
         "voices": list(voices),
         "rates": dict(rates),

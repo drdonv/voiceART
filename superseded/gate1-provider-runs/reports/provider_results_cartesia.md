@@ -7,5 +7,5 @@ Run: prerecorded English numeric corpus, 90 clips, 4 repeats (360 observations).
 - High-error clips: 9
 - Main failure: `2550` was consistently transcribed as `570` across the affected voice/rate combinations.
 
-Raw transcripts are retained in the `transcripts` field of each row in [results.jsonl](output/stt-numeric-cartesia/cartesia/numeric/results.jsonl).
+Raw transcripts are retained in the `transcripts` field of each row in [results.jsonl](../cartesia-parser-bug-4x/results.jsonl).
 
