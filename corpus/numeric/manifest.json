@@ -1,0 +1,972 @@
+{
+  "attack": "numeric-robustness-qa",
+  "sample_count": 90,
+  "sample_rate_hz": 24000,
+  "utterances": [
+    {
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150"
+    },
+    {
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150"
+    },
+    {
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550"
+    },
+    {
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550"
+    },
+    {
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75"
+    },
+    {
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42"
+    },
+    {
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200"
+    },
+    {
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520"
+    },
+    {
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550"
+    },
+    {
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550"
+    }
+  ],
+  "voices": [
+    "af_heart",
+    "af_bella",
+    "am_adam"
+  ],
+  "rates": {
+    "slow": 0.8,
+    "normal": 1.0,
+    "fast": 1.35
+  },
+  "samples": [
+    {
+      "file": "numeric-150-digits__af_heart__slow.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__af_heart__normal.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__af_heart__fast.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__slow.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__normal.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__fast.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__slow.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__normal.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__fast.wav",
+      "id": "numeric-150-digits",
+      "text": "Please record 150 units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "9305f74bac19f920"
+    },
+    {
+      "file": "numeric-150-words__af_heart__slow.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__af_heart__normal.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__af_heart__fast.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__af_bella__slow.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__af_bella__normal.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__af_bella__fast.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__am_adam__slow.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__am_adam__normal.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-150-words__am_adam__fast.wav",
+      "id": "numeric-150-words",
+      "text": "Please record one hundred fifty units for the QA fixture.",
+      "spoken_amount": "150",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "274fda8f31eea915"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__slow.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__normal.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__fast.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__slow.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__normal.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__fast.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__slow.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__normal.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__fast.wav",
+      "id": "numeric-2550-digits",
+      "text": "Please record 2550 units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "2eba2cfda02677d3"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__slow.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__normal.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__fast.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__slow.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__normal.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__fast.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__slow.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__normal.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__fast.wav",
+      "id": "numeric-2550-words",
+      "text": "Please record two thousand five hundred fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "4a2b6bdab4feaf86"
+    },
+    {
+      "file": "numeric-75-words__af_heart__slow.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__af_heart__normal.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__af_heart__fast.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__af_bella__slow.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__af_bella__normal.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__af_bella__fast.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__am_adam__slow.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__am_adam__normal.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-75-words__am_adam__fast.wav",
+      "id": "numeric-75-words",
+      "text": "Please record seventy five units for the QA fixture.",
+      "spoken_amount": "75",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "33053e739eb8a61d"
+    },
+    {
+      "file": "numeric-42-words__af_heart__slow.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__af_heart__normal.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__af_heart__fast.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__af_bella__slow.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__af_bella__normal.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__af_bella__fast.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__am_adam__slow.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__am_adam__normal.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-42-words__am_adam__fast.wav",
+      "id": "numeric-42-words",
+      "text": "Please record forty two units for the QA fixture.",
+      "spoken_amount": "42",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "ac59d1215b32694e"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__slow.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__normal.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__fast.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__slow.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__normal.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__fast.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__slow.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__normal.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__fast.wav",
+      "id": "numeric-1200-words",
+      "text": "Please record one thousand two hundred units for the QA fixture.",
+      "spoken_amount": "1200",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "68a43fa727995142"
+    },
+    {
+      "file": "numeric-520-words__af_heart__slow.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__af_heart__normal.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__af_heart__fast.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__af_bella__slow.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__af_bella__normal.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__af_bella__fast.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__am_adam__slow.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__am_adam__normal.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-520-words__am_adam__fast.wav",
+      "id": "numeric-520-words",
+      "text": "Please record five hundred twenty units for the QA fixture.",
+      "spoken_amount": "520",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "770ad8cee99704ee"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__slow.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__normal.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__fast.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__slow.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__normal.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__fast.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__slow.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__normal.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__fast.wav",
+      "id": "numeric-2550-spelled",
+      "text": "Please record twenty five fifty units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "c4f134b5e773fe08"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__slow.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__normal.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__fast.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_heart",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__slow.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__normal.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__fast.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "af_bella",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__slow.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "slow",
+      "speed": 0.8,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__normal.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "normal",
+      "speed": 1.0,
+      "text_hash": "a8f5df72b58854ee"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__fast.wav",
+      "id": "numeric-2550-separated",
+      "text": "Please record two five five zero units for the QA fixture.",
+      "spoken_amount": "2550",
+      "voice": "am_adam",
+      "rate": "fast",
+      "speed": 1.35,
+      "text_hash": "a8f5df72b58854ee"
+    }
+  ],
+  "cache_root": "output/kokoro-cache/numeric",
+  "source": "kokoro",
+  "language_code": "a"
+}

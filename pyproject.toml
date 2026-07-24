@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voiceart-benchmark"
+version = "0.1.0"
+description = "Reproducible STT robustness benchmarks for voice providers"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = [
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+deepgram = ["deepgram-sdk>=3.0"]
+websockets = ["websockets>=12.0"]
+whisper = [
+    "faster-whisper>=1.0",
+    "word2number>=1.1",
+]
+kokoro = [
+    "kokoro>=0.9.4,<1",
+    "soundfile>=0.12",
+    "numpy>=1.24",
+]
+all = [
+    "voiceart-benchmark[deepgram,websockets,whisper,kokoro]",
+]
+dev = [
+    "voiceart-benchmark[all]",
+    "pytest>=8.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+voiceart = "voiceart.cli.main:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/voiceart"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "TCH", "ANN", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"

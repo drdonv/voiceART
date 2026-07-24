@@ -1,0 +1,406 @@
+{
+  "benchmark": "numeric-robustness-qa",
+  "corpus": {
+    "aggregate_sha256": "1391fc5c6090e310598d92248c74990054a819ab26f7ead3534aaf5426ec9cd1",
+    "lock_path": "benchmark/numeric-corpus-lock.json",
+    "manifest_sha256": "a389d6b43f6ff0d38a02e468ae78d8366823e2f1946cc905315a5ef9aa571540"
+  },
+  "protocol": {
+    "clips": 90,
+    "high_error_threshold": 0.5,
+    "repeats_per_clip": 4
+  },
+  "providers": [
+    {
+      "affected_clip_rate": 0.0,
+      "affected_clips": 0,
+      "ambiguous_recoverable_breakdown": [
+        {
+          "clips": 18,
+          "observations": 72,
+          "surface_form": "25 50"
+        }
+      ],
+      "ambiguous_recoverable_clip_rate": 0.2,
+      "ambiguous_recoverable_clips": 18,
+      "ambiguous_recoverable_examples": [
+        {
+          "id": "numeric-2550-digits",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 50 units for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "surface_form": "25 50",
+          "voice": "af_bella"
+        }
+      ],
+      "ambiguous_recoverable_observations": 72,
+      "ambiguous_recoverable_rate": 0.2,
+      "clips": 90,
+      "display_name": "Deepgram",
+      "failure_rate": 0.0,
+      "failures": [],
+      "high_error_clips": 0,
+      "incorrect_observations": 0,
+      "model": "nova-3",
+      "observations": 360,
+      "provider": "deepgram",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/deepgram-nova3-4x/results.jsonl",
+      "results_sha256": "ca6d695267314526a5e7863a4426be8eb17b768fb77e1cca6af36b03766ca629",
+      "run_date": "2026-07-23",
+      "settings": {
+        "language": "en",
+        "numerals": true,
+        "punctuate": true,
+        "smart_format": true
+      }
+    },
+    {
+      "affected_clip_rate": 0.0,
+      "affected_clips": 0,
+      "ambiguous_recoverable_breakdown": [
+        {
+          "clips": 9,
+          "observations": 36,
+          "surface_form": "two 550"
+        }
+      ],
+      "ambiguous_recoverable_clip_rate": 0.1,
+      "ambiguous_recoverable_clips": 9,
+      "ambiguous_recoverable_examples": [
+        {
+          "id": "numeric-2550-separated",
+          "rate": "fast",
+          "raw_transcript": "Please record two 550 units for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "surface_form": "two 550",
+          "voice": "af_bella"
+        }
+      ],
+      "ambiguous_recoverable_observations": 36,
+      "ambiguous_recoverable_rate": 0.1,
+      "clips": 90,
+      "display_name": "Cartesia",
+      "failure_rate": 0.0,
+      "failures": [],
+      "high_error_clips": 0,
+      "incorrect_observations": 0,
+      "model": "ink-whisper",
+      "observations": 360,
+      "provider": "cartesia",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/cartesia-ink-4x/results.jsonl",
+      "results_sha256": "0a0f465c7d30f6d5d598fd5a5a749dcb3eb859f9a54bfc351d4649d82a5e3c35",
+      "run_date": "2026-07-23",
+      "settings": {
+        "api_version": "2026-03-01",
+        "language": "en"
+      }
+    },
+    {
+      "affected_clip_rate": 0.03333333333333333,
+      "affected_clips": 3,
+      "ambiguous_recoverable_breakdown": [],
+      "ambiguous_recoverable_clip_rate": 0.0,
+      "ambiguous_recoverable_clips": 0,
+      "ambiguous_recoverable_examples": [],
+      "ambiguous_recoverable_observations": 0,
+      "ambiguous_recoverable_rate": 0.0,
+      "clips": 90,
+      "display_name": "ElevenLabs",
+      "failure_rate": 0.019444444444444445,
+      "failures": [
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 2,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 3,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 4,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 FIFA units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 FIFA units for the QA fixture",
+          "repeat": 3,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-digits",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 fifth units for the QA fixture",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "am_adam"
+        }
+      ],
+      "high_error_clips": 2,
+      "incorrect_observations": 7,
+      "model": "scribe_v2",
+      "observations": 360,
+      "provider": "elevenlabs",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/elevenlabs-scribe-v2-4x/results.jsonl",
+      "results_sha256": "f6992c7ce3f8199616aeff8f81e5a1269ecb9060ebb0a6baa94ad1d203626f6c",
+      "run_date": "2026-07-23",
+      "settings": {
+        "diarize": false,
+        "language_code": "eng",
+        "tag_audio_events": false
+      }
+    },
+    {
+      "affected_clip_rate": 0.05555555555555555,
+      "affected_clips": 5,
+      "ambiguous_recoverable_breakdown": [
+        {
+          "clips": 4,
+          "observations": 14,
+          "surface_form": "25 50"
+        },
+        {
+          "clips": 7,
+          "observations": 22,
+          "surface_form": "25-50"
+        },
+        {
+          "clips": 2,
+          "observations": 7,
+          "surface_form": "25.50"
+        },
+        {
+          "clips": 1,
+          "observations": 4,
+          "surface_form": "two 550"
+        },
+        {
+          "clips": 1,
+          "observations": 3,
+          "surface_form": "two 550s"
+        }
+      ],
+      "ambiguous_recoverable_clip_rate": 0.15555555555555556,
+      "ambiguous_recoverable_clips": 14,
+      "ambiguous_recoverable_examples": [
+        {
+          "id": "numeric-2550-digits",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 50 minutes for the QA fixture.",
+          "repeat": 2,
+          "spoken_amount": "2550",
+          "surface_form": "25 50",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-digits",
+          "rate": "normal",
+          "raw_transcript": "Please record 25-50 units for the QA fixture.",
+          "repeat": 2,
+          "spoken_amount": "2550",
+          "surface_form": "25-50",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-digits",
+          "rate": "normal",
+          "raw_transcript": "Please record 25.50 units for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "surface_form": "25.50",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-separated",
+          "rate": "fast",
+          "raw_transcript": "Please record two 550 units for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "surface_form": "two 550",
+          "voice": "af_heart"
+        },
+        {
+          "id": "numeric-2550-separated",
+          "rate": "normal",
+          "raw_transcript": "Please record two 550s for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "surface_form": "two 550s",
+          "voice": "af_bella"
+        }
+      ],
+      "ambiguous_recoverable_observations": 50,
+      "ambiguous_recoverable_rate": 0.1388888888888889,
+      "clips": 90,
+      "display_name": "OpenAI",
+      "failure_rate": 0.03333333333333333,
+      "failures": [
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "14",
+          "rate": "fast",
+          "raw_transcript": "Please record 14 minutes for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "42",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": null,
+          "rate": "fast",
+          "raw_transcript": "Please record findings for the QA fixture.",
+          "repeat": 2,
+          "spoken_amount": "42",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "14",
+          "rate": "fast",
+          "raw_transcript": "Please record 14 minutes for the QA fixture.",
+          "repeat": 3,
+          "spoken_amount": "42",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "14",
+          "rate": "fast",
+          "raw_transcript": "Please record 14 units for the QA fixture.",
+          "repeat": 4,
+          "spoken_amount": "42",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "40",
+          "rate": "fast",
+          "raw_transcript": "Please record 40 T units for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "42",
+          "voice": "af_heart"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "40",
+          "rate": "fast",
+          "raw_transcript": "Please record 40 T units for the QA fixture.",
+          "repeat": 2,
+          "spoken_amount": "42",
+          "voice": "af_heart"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "40",
+          "rate": "fast",
+          "raw_transcript": "Please record 40 T units for the QA fixture.",
+          "repeat": 3,
+          "spoken_amount": "42",
+          "voice": "af_heart"
+        },
+        {
+          "id": "numeric-42-words",
+          "observed_amount": "40",
+          "rate": "fast",
+          "raw_transcript": "Please record 40 T units for the QA fixture.",
+          "repeat": 4,
+          "spoken_amount": "42",
+          "voice": "af_heart"
+        },
+        {
+          "id": "numeric-75-words",
+          "observed_amount": null,
+          "rate": "fast",
+          "raw_transcript": "These were good semi-finals for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "75",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-75-words",
+          "observed_amount": null,
+          "rate": "fast",
+          "raw_transcript": "These were good semi-finalists for the QA fixture.",
+          "repeat": 2,
+          "spoken_amount": "75",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-digits",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 VFX for the QA fixture.",
+          "repeat": 1,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        },
+        {
+          "id": "numeric-2550-spelled",
+          "observed_amount": "25",
+          "rate": "fast",
+          "raw_transcript": "Please record 25 VMs for the QA fixture.",
+          "repeat": 4,
+          "spoken_amount": "2550",
+          "voice": "af_bella"
+        }
+      ],
+      "high_error_clips": 3,
+      "incorrect_observations": 12,
+      "model": "gpt-4o-transcribe",
+      "observations": 360,
+      "provider": "openai",
+      "repeats_per_clip": 4,
+      "results_path": "benchmark/runs/openai-gpt-4o-transcribe-4x/results.jsonl",
+      "results_sha256": "f1e7d3d9c475407b0cd5ea23be48f31a79d41819aca8d55ee8160f1b9e961974",
+      "run_date": "2026-07-23",
+      "settings": {
+        "language": "en",
+        "response_format": "json",
+        "temperature": 0
+      }
+    }
+  ],
+  "schema_version": 2,
+  "status": "canonical"
+}

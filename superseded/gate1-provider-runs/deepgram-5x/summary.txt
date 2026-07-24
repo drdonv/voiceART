@@ -1,0 +1,14 @@
+repeats=5 threshold=0.5
+clips=90
+high_error=0
+
+0.00 deepgram numeric-1200-words af_bella/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__fast.wav)
+0.00 deepgram numeric-1200-words af_bella/normal 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__normal.wav)
+0.00 deepgram numeric-1200-words af_bella/slow 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__slow.wav)
+0.00 deepgram numeric-1200-words af_heart/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__fast.wav)
+0.00 deepgram numeric-1200-words af_heart/normal 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__normal.wav)
+0.00 deepgram numeric-1200-words af_heart/slow 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_heart__slow.wav)
+0.00 deepgram numeric-1200-words am_adam/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__am_adam__fast.wav)
+0.00 deepgram numeric-1200-words am_adam/normal 1200 -> None (output/kokoro/numeric/numeric-1200-words__am_adam__normal.wav)
+0.00 deepgram numeric-1200-words am_adam/slow 1200 -> None (output/kokoro/numeric/numeric-1200-words__am_adam__slow.wav)
+0.00 deepgram numeric-150-digits af_bella/fast 150 -> None (output/kokoro/numeric/numeric-150-digits__af_bella__fast.wav)

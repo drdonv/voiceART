@@ -1,0 +1,18 @@
+repeats=4 threshold=0.5
+clips=90
+observations=360
+gate1_failure_rate=0.033333
+clips_with_any_error_rate=0.055556
+high_error_rate=0.033333
+high_error=3
+
+1.00 openai numeric-42-words af_bella/fast 42 -> 14 (corpus/numeric/numeric-42-words__af_bella__fast.wav)
+1.00 openai numeric-42-words af_heart/fast 42 -> 40 (corpus/numeric/numeric-42-words__af_heart__fast.wav)
+0.50 openai numeric-75-words af_bella/fast 75 -> None (corpus/numeric/numeric-75-words__af_bella__fast.wav)
+0.25 openai numeric-2550-digits af_bella/fast 2550 -> 25 (corpus/numeric/numeric-2550-digits__af_bella__fast.wav)
+0.25 openai numeric-2550-spelled af_bella/fast 2550 -> 25 (corpus/numeric/numeric-2550-spelled__af_bella__fast.wav)
+0.00 openai numeric-1200-words af_bella/fast 1200 -> None (corpus/numeric/numeric-1200-words__af_bella__fast.wav)
+0.00 openai numeric-1200-words af_bella/normal 1200 -> None (corpus/numeric/numeric-1200-words__af_bella__normal.wav)
+0.00 openai numeric-1200-words af_bella/slow 1200 -> None (corpus/numeric/numeric-1200-words__af_bella__slow.wav)
+0.00 openai numeric-1200-words af_heart/fast 1200 -> None (corpus/numeric/numeric-1200-words__af_heart__fast.wav)
+0.00 openai numeric-1200-words af_heart/normal 1200 -> None (corpus/numeric/numeric-1200-words__af_heart__normal.wav)

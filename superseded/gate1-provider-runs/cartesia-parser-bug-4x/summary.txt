@@ -1,0 +1,18 @@
+repeats=4 threshold=0.5
+clips=90
+observations=360
+gate1_failure_rate=0.100000
+clips_with_any_error_rate=0.100000
+high_error_rate=0.100000
+high_error=9
+
+1.00 cartesia numeric-2550-separated af_bella/fast 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_bella__fast.wav)
+1.00 cartesia numeric-2550-separated af_bella/normal 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_bella__normal.wav)
+1.00 cartesia numeric-2550-separated af_bella/slow 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_bella__slow.wav)
+1.00 cartesia numeric-2550-separated af_heart/fast 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_heart__fast.wav)
+1.00 cartesia numeric-2550-separated af_heart/normal 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_heart__normal.wav)
+1.00 cartesia numeric-2550-separated af_heart/slow 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__af_heart__slow.wav)
+1.00 cartesia numeric-2550-separated am_adam/fast 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__am_adam__fast.wav)
+1.00 cartesia numeric-2550-separated am_adam/normal 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__am_adam__normal.wav)
+1.00 cartesia numeric-2550-separated am_adam/slow 2550 -> 570 (output/kokoro/numeric/numeric-2550-separated__am_adam__slow.wav)
+0.00 cartesia numeric-1200-words af_bella/fast 1200 -> None (output/kokoro/numeric/numeric-1200-words__af_bella__fast.wav)

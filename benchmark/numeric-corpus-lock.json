@@ -1,0 +1,375 @@
+{
+  "schema_version": 1,
+  "corpus": "numeric-robustness-qa",
+  "clip_count": 90,
+  "manifest": {
+    "path": "corpus/numeric/manifest.json",
+    "sha256": "a389d6b43f6ff0d38a02e468ae78d8366823e2f1946cc905315a5ef9aa571540"
+  },
+  "aggregate": {
+    "algorithm": "sha256 of the concatenated lowercase WAV sha256 hex digests in manifest sample order, with no delimiter",
+    "sha256": "1391fc5c6090e310598d92248c74990054a819ab26f7ead3534aaf5426ec9cd1"
+  },
+  "files": [
+    {
+      "file": "numeric-150-digits__af_heart__slow.wav",
+      "sha256": "58ede5bd30c24364e1554ce4429238aa4073d5df7addedb850e9bd6235aff96c"
+    },
+    {
+      "file": "numeric-150-digits__af_heart__normal.wav",
+      "sha256": "5ae59450650cbda3583814f744e9b7e3f28edf9a7f74744919c644c2c0f0a353"
+    },
+    {
+      "file": "numeric-150-digits__af_heart__fast.wav",
+      "sha256": "15b111896b27bfce42a276ad35e96cee0ff8fe4b6491649ebd6fcb86a92f8158"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__slow.wav",
+      "sha256": "b7503a6ba26b6c86d8dbbf80a28f88c5241f61603eda5251218ff1a9c28f0407"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__normal.wav",
+      "sha256": "183456674d44c7df0e488605e9ed7fbd650bc12d74fabdc155da1b38f3719e08"
+    },
+    {
+      "file": "numeric-150-digits__af_bella__fast.wav",
+      "sha256": "01560e61d17bec4d349a71b4f599744d281d830269ad591d9e0de22c0def2dec"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__slow.wav",
+      "sha256": "c7664bd1987f0ba68297e0734a7881cc50ce60f26491f89516fb2fcf35b0fe1f"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__normal.wav",
+      "sha256": "f1db5092b6974c63c4aa7ba354acf923607f57cb4b2d7482b6d62929543ffaff"
+    },
+    {
+      "file": "numeric-150-digits__am_adam__fast.wav",
+      "sha256": "9f3a677b788ae3930fb1265ea17d84b5047d5649d89b5b0ab6df657b811da273"
+    },
+    {
+      "file": "numeric-150-words__af_heart__slow.wav",
+      "sha256": "e630a04f2a19a63bf2ef7a1d58d1fc29f97c2d31d87f722edd242ec910dd3951"
+    },
+    {
+      "file": "numeric-150-words__af_heart__normal.wav",
+      "sha256": "9f5e69a04256379058e240db1421c9021a5d4dc8a4ba23a95f3bd24c162c8f2c"
+    },
+    {
+      "file": "numeric-150-words__af_heart__fast.wav",
+      "sha256": "9ca81063816add0356208589aed5ae292c513207dee75c75742a58f80477ab9c"
+    },
+    {
+      "file": "numeric-150-words__af_bella__slow.wav",
+      "sha256": "2164cb3beb622795123edbea7552535b09027eacf9a68854b3774bf53fa55ff7"
+    },
+    {
+      "file": "numeric-150-words__af_bella__normal.wav",
+      "sha256": "e18b5aca370ed757c270b43edb42e972595ae5f30f4dc30087e54517706a9c3e"
+    },
+    {
+      "file": "numeric-150-words__af_bella__fast.wav",
+      "sha256": "c554c7ca981f0d45a8175d1525bb59a23133192c75ba6a4b66585b2aa0109d2a"
+    },
+    {
+      "file": "numeric-150-words__am_adam__slow.wav",
+      "sha256": "30aed5cb6e2266cf5d1eae8baf12f4e5e472dc2107a85ef18c74447b166810e3"
+    },
+    {
+      "file": "numeric-150-words__am_adam__normal.wav",
+      "sha256": "e7690e015c288f678901aa314809f1e39fe8937f14441d8b1750f68a28009e23"
+    },
+    {
+      "file": "numeric-150-words__am_adam__fast.wav",
+      "sha256": "a843d42c52097247f50654b578fd527b5b98d8a55ef987e71a91da2a6b051a79"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__slow.wav",
+      "sha256": "8a3fc98810d520e1daa86b18048a44044b082eafba07055d4a9076d65b6e372a"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__normal.wav",
+      "sha256": "ba77be4234d020430fc5371edad45dc86444d7fa25e3936ba50afcadbaac6e02"
+    },
+    {
+      "file": "numeric-2550-digits__af_heart__fast.wav",
+      "sha256": "d1ea8439b0b4ba47b4ba8a1c5351a11c39597e97082e0c645cfcdbf84ca7cee8"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__slow.wav",
+      "sha256": "c902b09baaf434e337e9cf29c883bbfc89d60de08b6ebedb4ce2d31fafe6aeca"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__normal.wav",
+      "sha256": "c634af99a482e4432b892f762d7d98b2399348311265d0817622dc5c13893514"
+    },
+    {
+      "file": "numeric-2550-digits__af_bella__fast.wav",
+      "sha256": "77b1cc8f662c3de7141180c537ae59a6e0edb441e49f14358321c143e2796b6a"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__slow.wav",
+      "sha256": "ddbb418fc8f6102178490abcc2708b4099a54fe72a6f5fa01fc0a5072dd2409c"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__normal.wav",
+      "sha256": "cedf1dcbfa589b479cb8422cf91542b45461fde5e4b4aa95dea85f2ce4f60f3d"
+    },
+    {
+      "file": "numeric-2550-digits__am_adam__fast.wav",
+      "sha256": "4d49750578cb1fc80e647677c3cde3d59d72ad60ab94acfbdd1fdfd059c1bf36"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__slow.wav",
+      "sha256": "b0c657fd02e24e0dc311419da5b4f1c6ed441cfed4eb35e1902e78c7eba26766"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__normal.wav",
+      "sha256": "78095b5ceabb04ac7b208505e1715e5bc4705b2e57e75e5c2d716bb6c9b855b7"
+    },
+    {
+      "file": "numeric-2550-words__af_heart__fast.wav",
+      "sha256": "5a55cb55f52db786381a1532bb3b390c17e6af89afeabba820bf934c599956d3"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__slow.wav",
+      "sha256": "e289060d9890720f575f4c5cbba9fa8a99fc0fede6c35e4b76e5eaafa25dc05c"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__normal.wav",
+      "sha256": "e30c7d65ca50aca4fe4205ab9c976efb357d9d781f7f77340037c16483e1e928"
+    },
+    {
+      "file": "numeric-2550-words__af_bella__fast.wav",
+      "sha256": "d2591441b67a773bdff6209d204235b6506057d2660aea82fec06e9742df59a8"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__slow.wav",
+      "sha256": "1804229fd30f4b12accbcc114471a56305eeb5511967ee46e4b6135b7020118d"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__normal.wav",
+      "sha256": "41fc9a3dd54763f9cb895e82ac66097406ae48823512169c5a3fec6b623f57ab"
+    },
+    {
+      "file": "numeric-2550-words__am_adam__fast.wav",
+      "sha256": "ae6ae22b227717af603062bb8fa51dad14f340ac5fcddb5d720919a5abf4d2e2"
+    },
+    {
+      "file": "numeric-75-words__af_heart__slow.wav",
+      "sha256": "009eaa69d81d7d6d9eff3d4c89730507628fb3755a8927f3269ce8bd92edb3cb"
+    },
+    {
+      "file": "numeric-75-words__af_heart__normal.wav",
+      "sha256": "1ccd15fe87b756f6693d1bba812d6a17ba53fc4b7601bfa97c1da45f29aca87c"
+    },
+    {
+      "file": "numeric-75-words__af_heart__fast.wav",
+      "sha256": "b54443e2b3aa60fb0a1c0943e58dbc2a941a09175728b70f4e795dbf3d6aeadb"
+    },
+    {
+      "file": "numeric-75-words__af_bella__slow.wav",
+      "sha256": "ff939102165cd2888646cac2d9f41cb47ac0dd877a9b0773c9d9fa4f8121f13a"
+    },
+    {
+      "file": "numeric-75-words__af_bella__normal.wav",
+      "sha256": "4cd69d8ac815d3af2543a288c51f5a05b745b6203d489cf73878bd48ceb4493d"
+    },
+    {
+      "file": "numeric-75-words__af_bella__fast.wav",
+      "sha256": "97b07137ea4ca1b2735fdd7ae0851a4542df175b7c3bb2a20e6f97d7e5d730ee"
+    },
+    {
+      "file": "numeric-75-words__am_adam__slow.wav",
+      "sha256": "b578d0f36acc7cb821d8700fcac674653cdeb8feb685ef7734742d8334e947fe"
+    },
+    {
+      "file": "numeric-75-words__am_adam__normal.wav",
+      "sha256": "e2875a643d3e078eb7815112a194786618f8157000ab8e9ab259662556043dc8"
+    },
+    {
+      "file": "numeric-75-words__am_adam__fast.wav",
+      "sha256": "eacbe9d8405dbf764e44a42b411a733ab0594ee852071fd7bde43a525b6764db"
+    },
+    {
+      "file": "numeric-42-words__af_heart__slow.wav",
+      "sha256": "42befa8873825c487d0ac6ec0fc29785ba279327a97d28240802a6648ba9c4d5"
+    },
+    {
+      "file": "numeric-42-words__af_heart__normal.wav",
+      "sha256": "ebc9a00e4878e5fe33b96c2047f1a01089ae17558787dcbdabeaa8f908113c39"
+    },
+    {
+      "file": "numeric-42-words__af_heart__fast.wav",
+      "sha256": "8136b8207c505f25a13421245c198b0e5fca3336554cf1b5f43f484eeae9025d"
+    },
+    {
+      "file": "numeric-42-words__af_bella__slow.wav",
+      "sha256": "62a587ddc46c7ae61403e9b0d6d026e1c318f5371fd3f0ea7350510d813264e3"
+    },
+    {
+      "file": "numeric-42-words__af_bella__normal.wav",
+      "sha256": "8760cf203272f6c90df9d3fcaeaf76d2fddd2ec86073822c2df87c5d8bb33482"
+    },
+    {
+      "file": "numeric-42-words__af_bella__fast.wav",
+      "sha256": "3476be1d6708b45e6880624231cd65eea2556334e8e3cb4085994afcee4dec30"
+    },
+    {
+      "file": "numeric-42-words__am_adam__slow.wav",
+      "sha256": "6a9d837f0149e95f8961df959e3949ef128c21bc0cd329a35d61bd79cf35b269"
+    },
+    {
+      "file": "numeric-42-words__am_adam__normal.wav",
+      "sha256": "d6172974220aded85a653ad4186d1c4e5327ed5c0eda31af882d3a8f12e5d68d"
+    },
+    {
+      "file": "numeric-42-words__am_adam__fast.wav",
+      "sha256": "1fbe3b456c43ad2d37336bf42266c9537d6020c416e1231407729b0ffb1805db"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__slow.wav",
+      "sha256": "340cfb9e8e74cbd581961e287d7d77bebbfff9bb98c971c4becb743c73f2054e"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__normal.wav",
+      "sha256": "697a5dd2e25132a9e049a6b481d15036b1f9dcb401ea3e7299ce601a1390f07a"
+    },
+    {
+      "file": "numeric-1200-words__af_heart__fast.wav",
+      "sha256": "20459f65a31d9c9d908cfc8c9ef81e57ff5d56175f4ad8f63d560a25d42f2452"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__slow.wav",
+      "sha256": "3a9a9ed22a192668081dc33852a5c83220dd50632c52d57f6b16c82e234925d0"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__normal.wav",
+      "sha256": "ca3f90255d8ed9e387de05bab6e0b2bded10fe7437c46a66912a8c9a07d7bc1f"
+    },
+    {
+      "file": "numeric-1200-words__af_bella__fast.wav",
+      "sha256": "c06704ce1162882c25775c38cf04ced74c2672f20507f7a0416f31cb96a257de"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__slow.wav",
+      "sha256": "3c53aa1affc804cdce272cc618b14a08c9f4974f86be9af96af933f5789c3648"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__normal.wav",
+      "sha256": "6c67d960e9f555cc042deb36b64fcbc1c9c915246ed2dfb09140e39aca9eeeed"
+    },
+    {
+      "file": "numeric-1200-words__am_adam__fast.wav",
+      "sha256": "55ecdd1fd04f211fd5a6f0521a2c0e03c70a32eb1e54e9f2c410cb292488dd2c"
+    },
+    {
+      "file": "numeric-520-words__af_heart__slow.wav",
+      "sha256": "9a09e426b1f6b76f914cd31374a9cfde44d8f75eb535fb224e07128a51691138"
+    },
+    {
+      "file": "numeric-520-words__af_heart__normal.wav",
+      "sha256": "00bab811a4c1ab7d9d570541bf6895107d5e0dd9692124a98b782ee4a329302f"
+    },
+    {
+      "file": "numeric-520-words__af_heart__fast.wav",
+      "sha256": "681f01d58f80d2ba5d04fcdd0fc2723267c746e8df0b316df663284e3a10b3a8"
+    },
+    {
+      "file": "numeric-520-words__af_bella__slow.wav",
+      "sha256": "128311b2fe178532dc9468c411d502851c5260dded0fe84d2b0028a7fd718970"
+    },
+    {
+      "file": "numeric-520-words__af_bella__normal.wav",
+      "sha256": "e0d45c433731d0941007238c090e037a196940783c65e69d2d37de43fa53e9e7"
+    },
+    {
+      "file": "numeric-520-words__af_bella__fast.wav",
+      "sha256": "97d03293d89a1241897d10c9b9c39d408d2b6c1a2e4e4d7591bfef9a41e9a091"
+    },
+    {
+      "file": "numeric-520-words__am_adam__slow.wav",
+      "sha256": "3ea5d22ea600a316242e1777ae6bdc4d82a5e828e84da4108c982c74b46115f9"
+    },
+    {
+      "file": "numeric-520-words__am_adam__normal.wav",
+      "sha256": "1efd2fc92f622fe17e9f2142f68455c916e931258d483b8a2f7914347391beff"
+    },
+    {
+      "file": "numeric-520-words__am_adam__fast.wav",
+      "sha256": "66a1024e62ed03ab76aa74c4a1a550926f3c07d226489a063877bf72c11b03a4"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__slow.wav",
+      "sha256": "10ed3051ba217f7f78681571a5a9e9607a6c53097a61c587ca9047f3d30adb9f"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__normal.wav",
+      "sha256": "5d9ddaf75c03a50f962c86e70532d0df45168e9a43dea3def6b910be2c395c97"
+    },
+    {
+      "file": "numeric-2550-spelled__af_heart__fast.wav",
+      "sha256": "1972baea51f90a9ec4789098183103dd56e27f8a4c7b38ecb303f351a9069db5"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__slow.wav",
+      "sha256": "1131bc0adfdaeb6ac69afbb31c0f7d250dded6097930b49d9beb33589b16034a"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__normal.wav",
+      "sha256": "3ab274080bb74504865acb52ecd7808b70699bdf655617655d5073d566ed567d"
+    },
+    {
+      "file": "numeric-2550-spelled__af_bella__fast.wav",
+      "sha256": "23b52041a63eb676383e0162e7a523959c7da21e224db278679c43b3db54a6da"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__slow.wav",
+      "sha256": "33460ac01c4dce8a504efac5bb5130fe938313d24bec428ae6b19baf438dccb0"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__normal.wav",
+      "sha256": "b3ca31c9e6b3bcae34d79918bb6913467b5fb544d5c33c2f6915cd2a78a1655b"
+    },
+    {
+      "file": "numeric-2550-spelled__am_adam__fast.wav",
+      "sha256": "cf732cdc2b5b82e7400264cd874a701ac20b2bb719a033fd0d5a24a518786c48"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__slow.wav",
+      "sha256": "d62f94925d3011287c770efae379bd2529d391f49ebe121cb97399e3821ac9ba"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__normal.wav",
+      "sha256": "33a701602ce1a0971281088f4ec436887bfa8b21af7c47f4ec48192148996a29"
+    },
+    {
+      "file": "numeric-2550-separated__af_heart__fast.wav",
+      "sha256": "3d99e598e1156e4a2eaa798f7602f03122653fc15fb5c6117bbbefadad23a8bc"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__slow.wav",
+      "sha256": "e7b97799c872fc2755bf961e83234ebf5d4fd970f194502da226af083d65eee0"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__normal.wav",
+      "sha256": "0af0e888255b507a9741f47a2259eb325759857e947bbae123c06bc5f4cef462"
+    },
+    {
+      "file": "numeric-2550-separated__af_bella__fast.wav",
+      "sha256": "2450acf9613513c3dd00ce66568d6bb35a12cdb7e2be3a621e5725a6d98c448d"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__slow.wav",
+      "sha256": "ff9b91e3284230b764003af3fbed5cb7c537134ce3ca03dd920a8172bf681af1"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__normal.wav",
+      "sha256": "427947b2b8ea122bddcb7853be6c59e837f33865076f4176d9043e53ac098a89"
+    },
+    {
+      "file": "numeric-2550-separated__am_adam__fast.wav",
+      "sha256": "0433b2dafbb0258fea53de0f5eba321cbf2181cd8b7d64893fbccb6a5b266959"
+    }
+  ]
+}
